@@ -1,0 +1,102 @@
+[project]
+name = "AI-Based Legal Reference System"
+description = "Legal Q&A assistant developed by Kavya Onti"
+author = "Kavya Onti"
+
+# List of environment variables to be provided by each user to use the app.
+user_env = []
+
+# Duration (in seconds) during which the session is saved when the connection is lost
+session_timeout = 3600
+
+# Duration (in seconds) of the user session expiry
+user_session_timeout = 1296000  # 15 days
+
+# Enable third parties caching (e.g., LangChain cache)
+cache = false
+
+# Whether to persist user environment variables (API keys) to the database
+persist_user_env = false
+
+# Whether to mask user environment variables (API keys) in the UI
+mask_user_env = false
+
+# Allow origins (for local and hosted)
+allow_origins = ["*"]
+
+# === Feature Configuration ===
+[features]
+unsafe_allow_html = false
+latex = false
+user_message_autoscroll = true
+auto_tag_thread = true
+edit_message = true
+allow_thread_sharing = false
+
+[features.slack]
+reaction_on_message_received = false
+
+[features.spontaneous_file_upload]
+enabled = true
+accept = ["*/*"]
+max_files = 20
+max_size_mb = 500
+
+[features.audio]
+enabled = false
+sample_rate = 24000
+
+[features.mcp]
+enabled = false
+
+[features.mcp.sse]
+enabled = true
+
+[features.mcp.streamable-http]
+enabled = true
+
+[features.mcp.stdio]
+enabled = true
+allowed_executables = ["npx", "uvx"]
+
+# === UI Configuration ===
+
+
+# Custom branding
+logo_file_url = "./logo.png"
+default_avatar_file_url = ""
+custom_meta_image_url = "https://chainlit-cloud.s3.eu-west-3.amazonaws.com/logo/chainlit_banner.png"
+custom_meta_url = "https://github.com/Chainlit/chainlit"
+
+# Custom login background image (optional)
+# login_page_image = "/public/custom-background.jpg"
+# login_page_image_filter = "brightness-50 grayscale"
+
+# === Custom Additions for Legal Reference System ===
+[UI]
+name = "Legal Reference Assistant"
+default_theme = "dark"
+layout = "wide"
+default_sidebar_state = "open"
+custom_css = "./public/style.css"
+custom_js = "./public/script.js"
+logo_file_url = "./public/logo.png"
+
+
+
+[persistence]
+enabled = true
+provider = "sqlite"
+path = ".chainlit/chat_history.db"
+
+[auth]
+enabled = true
+login_type = "local"   # Later can integrate Google OAuth
+# Add these optional customization fields:
+signup_enabled = true
+password_reset_enabled = true
+
+[meta]
+generated_by = "2.8.3"
+
+

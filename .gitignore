@@ -1,0 +1,45 @@
+# Virtual environments
+venv/
+src/venv/
+Legal_Reference_System/venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Model and large binary files
+*.pt
+*.pkl
+*.h5
+*.weights
+*.zip
+*.dll
+*.lib
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# Large data
+data/
+Legal_Reference_System/data/
+
+# PDFs
+*.pdf
+
+# embeddings / chunks
+*.json
+*.txt
+
+# database
+*.db
+
+# env
+.env
+
+# venv
+venv/
+__pycache__/

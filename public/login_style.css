@@ -1,0 +1,81 @@
+/* === LOGIN PAGE THEME === */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-container {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    padding: 2.5rem;
+    text-align: center;
+    color: white;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #00b4d8;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.7rem 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    outline: none;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    background: #00b4d8;
+    border: none;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: #0096c7;
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
+}
+
+.toggle-link {
+    color: #90e0ef;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+.toggle-link:hover {
+    color: #caf0f8;
+    text-decoration: underline;
+}

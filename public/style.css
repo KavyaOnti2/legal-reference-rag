@@ -1,0 +1,57 @@
+/* Background Gradient */
+[data-testid="stAppViewContainer"] {
+    background: radial-gradient(circle at top left, #0b132b, #1c2541, #3a506b);
+    color: #E8F0F2;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1c2541, #3a506b);
+    color: #F8F9FA;
+    border-right: 1px solid #3A506B;
+}
+
+.stButton button {
+    background: #3FA2F7;
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 0.6em 1em;
+    transition: all 0.3s ease;
+}
+.stButton button:hover {
+    background: #56C1F7;
+    transform: scale(1.05);
+}
+
+/* Input Field */
+div[data-testid="stChatInput"] textarea {
+    background-color: #0b132b;
+    color: #E8F0F2;
+    border: 1px solid #3FA2F7;
+    border-radius: 10px;
+}
+
+/* Chat Bubbles */
+.stChatMessage.user {
+    background: rgba(63, 162, 247, 0.15);
+    border-radius: 12px;
+    padding: 0.8em;
+}
+.stChatMessage.assistant {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 0.8em;
+}
+
+/* Title */
+h1 {
+    color: #56C1F7;
+    font-weight: 700;
+}
+
+/* Sidebar title */
+h3, h2, h4 {
+    color: #FFD700 !important;
+}
